@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Toggle del menú responsive
+    // Toggle del menú responsive en dispositivos móviles
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
