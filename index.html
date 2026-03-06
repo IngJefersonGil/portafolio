@@ -16,6 +16,9 @@
     <!-- Cursor glow effect -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
+    <!-- Mesh Gradient Background -->
+    <div class="mesh-gradient"></div>
+
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <img id="lightbox-img" src="" alt="">
@@ -36,20 +39,30 @@
 
     <!-- HERO -->
     <header class="hero">
-        <div class="hero-badge">Disponible para proyectos</div>
-        <h1>
-            Software<br>
-            <span class="line2">Engineer</span>
-        </h1>
-        <p>Desarrollo plataformas web y m&#243;viles enfocadas en automatizaci&#243;n de negocios, sistemas
-            empresariales y arquitectura de software escalable.</p>
-        <div class="hero-cta">
-            <a href="#projects" class="btn-primary">Ver proyectos <span>&#8594;</span></a>
-            <a href="#contact" class="btn-ghost">Contactar</a>
+        <div class="hero-bg-elements">
+            <div class="glow-1"></div>
+            <div class="glow-2"></div>
+            <div class="glow-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Disponible para proyectos
+            </div>
+            <h1>
+                Software<br>
+                <span class="line2">Engineer</span>
+            </h1>
+            <p>Arquitecto de soluciones digitales y desarrollador full-stack. Transformo ideas complejas en interfaces
+                elegantes y sistemas escalables.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">Explorar Proyectos <span>&rarr;</span></a>
+                <a href="#contact" class="btn-ghost">Hablemos</a>
+            </div>
         </div>
         <div class="hero-scroll">
             <div class="scroll-line"></div>
-            scroll para explorar
+            <span>SCROLL</span>
         </div>
     </header>
 
@@ -58,31 +71,51 @@
         <div class="section-inner">
             <div class="section-tag reveal">Perfil</div>
             <h2 class="section-title reveal">Sobre m&#237;</h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>Ingeniero de software con experiencia en desarrollo de aplicaciones web, m&#243;viles y desktop,
-                        enfocado en crear soluciones reales para negocios.</p>
-                    <p>Especializado en plataformas de gesti&#243;n empresarial, CRM y comercio electr&#243;nico.
-                        Apasionado por la arquitectura de software limpia y la ciberseguridad.</p>
-                    <p>Creo que el mejor software es aquel que resuelve problemas reales con elegancia t&#233;cnica y
-                        sin fricciones para el usuario final.</p>
+            <div class="bento-grid about-bento">
+                <div class="bento-item border-gradient glass about-main reveal"
+                    style="grid-column: span 2; grid-row: span 2;">
+                    <h3>Mi Filosofía</h3>
+                    <p>Ingeniero de software enfocado en crear soluciones reales para negocios. Especializado en
+                        plataformas de gestión empresarial, CRM y arquitectura escalable.</p>
+                    <p>Creo que el mejor software es aquel que resuelve problemas reales con elegancia técnica y sin
+                        fricciones para el usuario final.</p>
                 </div>
-                <div class="about-stats reveal">
-                    <div class="stat-card">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">A&#241;os de experiencia</span>
+                <div class="bento-item border-gradient glass stat-card reveal">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Años de Exp.</span>
+                </div>
+                <div class="bento-item border-gradient glass stat-card reveal">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="bento-item border-gradient glass stat-card reveal">
+                    <span class="stat-number">01</span>
+                    <span class="stat-label">Premios</span>
+                </div>
+                <div class="bento-item border-gradient glass stat-card reveal">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Tech Stack</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certificados -->
+    <section id="certificates">
+        <div class="section-inner">
+            <div class="section-tag reveal">Certificados</div>
+            <h2 class="section-title reveal">Certificados</h2>
+            <div class="certificates-grid">
+                <!-- Certificado DevOps-->
+                <div class="certificate-card border-gradient glass reveal">
+                    <div class="card-header">
+                        <div class="card-icon">&#127970;</div>
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Proyectos completados</span>
+                    <div class="certificate-img">
+                        <img src="img/Certificado_DevOps.jpg" alt="DevOps">
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-number">8+</span>
-                        <span class="stat-label">Tecnolog&#237;as dominadas</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">01</span>
-                        <span class="stat-label">Premio de programaci&#243;n</span>
+                    <div class="card-body">
+                        <h3>Hard Devs</h3>
+                        <p>Webinar: Introducción a DevOps</p>
                     </div>
                 </div>
             </div>
@@ -99,7 +132,7 @@
             <div class="projects-grid">
 
                 <!-- SAGESPRA - Featured -->
-                <div class="project-card featured reveal">
+                <div class="project-card border-gradient featured glass reveal">
                     <div class="card-header">
                         <div class="card-icon">&#127970;</div>
                         <a href="https://github.com/IngJefersonGil" class="card-link" target="_blank">&#8599;</a>
@@ -112,49 +145,45 @@
                     </div>
                     <div class="card-body">
                         <h3>SAGESPRA</h3>
-                        <p>Sistema de gesti&#243;n empresarial para centralizar operaciones y procesos administrativos.
-                            Dise&#241;ado para escalar con el crecimiento del negocio.</p>
+                        <p>Sistema de gestión empresarial para centralizar operaciones y procesos administrativos.
+                            Diseñado para escalar con el crecimiento del negocio.</p>
                         <div class="card-tags">
                             <span class="tag">Gesti&#243;n empresarial</span>
                             <span class="tag">Dashboard</span>
                             <span class="tag">Reportes</span>
-                            <span class="tag">Multi-usuario</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- CRM -->
-                <div class="project-card reveal">
+                <div class="project-card border-gradient glass reveal">
                     <div class="card-header">
                         <div class="card-icon">&#128202;</div>
                         <span class="card-link">&#8599;</span>
                     </div>
                     <div class="card-body">
                         <h3>CRM Empresarial</h3>
-                        <p>Plataforma para gesti&#243;n de clientes, seguimiento de ventas y control de operaciones en
-                            tiempo real.</p>
+                        <p>Plataforma para gesti&#243;n de clientes, seguimiento de ventas y control de operaciones.</p>
                         <div class="card-tags">
                             <span class="tag">CRM</span>
                             <span class="tag">Ventas</span>
-                            <span class="tag">Analytics</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- E-commerce -->
-                <div class="project-card reveal">
+                <div class="project-card border-gradient glass reveal">
                     <div class="card-header">
                         <div class="card-icon">&#128722;</div>
                         <span class="card-link">&#8599;</span>
                     </div>
                     <div class="card-body">
                         <h3>Plataforma E-commerce</h3>
-                        <p>Sistema de comercio electr&#243;nico dise&#241;ado para digitalizar negocios tradicionales
-                            con cero fricci&#243;n.</p>
+                        <p>Sistema de comercio electr&#243;nico dise&#241;ado para digitalizar negocios tradicionales.
+                        </p>
                         <div class="card-tags">
                             <span class="tag">E-commerce</span>
                             <span class="tag">Pagos</span>
-                            <span class="tag">Inventario</span>
                         </div>
                     </div>
                 </div>
@@ -204,19 +233,19 @@
         <div class="section-inner">
             <div class="section-tag reveal">Stack</div>
             <h2 class="section-title reveal">Habilidades T&#233;cnicas</h2>
-            <div class="skills-container">
-
-                <div class="skill-group reveal">
+            <div class="bento-grid skills-bento">
+                <div class="bento-item border-gradient glass skill-group reveal" style="grid-column: span 2;">
                     <h4>Frontend &amp; Mobile</h4>
                     <div class="skill-items">
                         <span class="skill-chip">JavaScript</span>
                         <span class="skill-chip">React</span>
                         <span class="skill-chip">HTML / CSS</span>
-                        <span class="skill-chip">Aplicaciones m&#243;viles</span>
+                        <span class="skill-chip">Aplicaciones móviles</span>
                     </div>
                 </div>
 
-                <div class="skill-group reveal">
+                <div class="bento-item border-gradient glass skill-group reveal"
+                    style="grid-row: span 2; grid-column: span 2;">
                     <h4>Backend &amp; Infraestructura</h4>
                     <div class="skill-items">
                         <span class="skill-chip">Node.js</span>
@@ -229,7 +258,7 @@
                     </div>
                 </div>
 
-                <div class="skill-group reveal">
+                <div class="bento-item border-gradient glass skill-group reveal">
                     <h4>Especialidades</h4>
                     <div class="skill-items">
                         <span class="skill-chip">Ciberseguridad</span>
@@ -238,14 +267,13 @@
                     </div>
                 </div>
 
-                <div class="skill-group reveal">
+                <div class="bento-item border-gradient glass skill-group reveal">
                     <h4>Idiomas</h4>
                     <div class="skill-items">
-                        <span class="skill-chip">Espa&#241;ol &#8212; Nativo</span>
-                        <span class="skill-chip">Ingl&#233;s &#8212; C1 Conversacional</span>
+                        <span class="skill-chip">Español — Nativo</span>
+                        <span class="skill-chip">Inglés — C1</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -259,37 +287,28 @@
             <h2 class="section-title reveal">Logros</h2>
             <div class="achievements-list">
 
-                <div class="achievement-item reveal">
+                <div class="achievement-item border-gradient glass reveal">
                     <span class="achievement-icon">&#127891;</span>
                     <div>
                         <div class="achievement-text">Ingeniero en Software</div>
-                        <div class="achievement-sub">T&#237;tulo universitario en Ingenier&#237;a de Software</div>
+                        <div class="achievement-sub">Título profesional con enfoque en arquitectura y sistemas
+                            distribuidos.</div>
                     </div>
                 </div>
 
-                <div class="achievement-item reveal">
+                <div class="achievement-item border-gradient glass reveal">
                     <span class="achievement-icon">&#128272;</span>
                     <div>
-                        <div class="achievement-text">M&#225;ster en Ciberseguridad</div>
-                        <div class="achievement-sub">Posgrado en seguridad inform&#225;tica y protecci&#243;n de
-                            sistemas</div>
+                        <div class="achievement-text">Máster en Ciberseguridad</div>
+                        <div class="achievement-sub">Especialización en desarrollo de software seguro.</div>
                     </div>
                 </div>
 
-                <div class="achievement-item reveal">
+                <div class="achievement-item border-gradient glass reveal">
                     <span class="achievement-icon">&#127942;</span>
                     <div>
-                        <div class="achievement-text">Ganador &#8212; Concurso de Programaci&#243;n 2019</div>
-                        <div class="achievement-sub">Primer lugar en competencia de desarrollo de software</div>
-                    </div>
-                </div>
-
-                <div class="achievement-item reveal">
-                    <span class="achievement-icon">&#128640;</span>
-                    <div>
-                        <div class="achievement-text">Desarrollo multiplataforma</div>
-                        <div class="achievement-sub">Aplicaciones web, m&#243;viles y desktop entregadas en
-                            producci&#243;n</div>
+                        <div class="achievement-text">Ganador — Concurso Programación</div>
+                        <div class="achievement-sub">Primer lugar en competencia de algoritmia y desarrollo ágil.</div>
                     </div>
                 </div>
 
