@@ -2,236 +2,312 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Jeferson Gil | Software Engineer</title>
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
-<div id="lightbox" class="lightbox">
-    <img id="lightbox-img">
-</div>
 
 <body>
 
-    <header>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
 
-        <nav class="nav">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="">
+    </div>
 
-            <h2 class="logo">Jeferson Gil</h2>
+    <!-- NAV -->
+    <nav>
+        <div class="logo">Jeferson<span>.</span>Gil</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#architecture">Arquitectura</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
 
-            <button class="menu-toggle" aria-label="Menu">
-                ☰
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#architecture">Arquitectura</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-
-        </nav>
-
-        <section class="hero">
-
-            <h1>Software Engineer</h1>
-
-            <p>
-
-                Desarrollo plataformas web y móviles enfocadas en
-                automatización de negocios, sistemas empresariales
-                y arquitectura de software escalable.
-
-            </p>
-
-            <a href="#projects" class="cta">Explorar proyectos</a>
-
-        </section>
-
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-badge">Disponible para proyectos</div>
+        <h1>
+            Software<br>
+            <span class="line2">Engineer</span>
+        </h1>
+        <p>Desarrollo plataformas web y móviles enfocadas en automatización de negocios, sistemas empresariales y
+            arquitectura de software escalable.</p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn-primary">Ver proyectos <span>→</span></a>
+            <a href="#contact" class="btn-ghost">Contactar</a>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            scroll para explorar
+        </div>
     </header>
 
-
-    <section id="about" class="section">
-
-        <h2>Sobre mí</h2>
-
-        <p>
-
-            Ingeniero de software con experiencia en desarrollo de
-            aplicaciones web, móviles y desktop.
-
-            Enfocado en crear soluciones reales para negocios,
-            incluyendo plataformas de gestión empresarial,
-            CRM y comercio electrónico.
-
-            Interesado en arquitectura de software y ciberseguridad.
-
-        </p>
-
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="section-tag reveal">Perfil</div>
+            <h2 class="section-title reveal">Sobre mí</h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>Ingeniero de software con experiencia en desarrollo de aplicaciones web, móviles y desktop,
+                        enfocado en crear soluciones reales para negocios.</p>
+                    <p>Especializado en plataformas de gestión empresarial, CRM y comercio electrónico. Apasionado por
+                        la arquitectura de software limpia y la ciberseguridad.</p>
+                    <p>Creo que el mejor software es aquel que resuelve problemas reales con elegancia técnica y sin
+                        fricciones para el usuario final.</p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Años de experiencia</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Proyectos completados</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Tecnologías dominadas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">01</span>
+                        <span class="stat-label">Premio de programación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <div class="divider"></div>
 
-    <section id="projects" class="section">
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-inner">
+            <div class="section-tag reveal">Trabajo</div>
+            <h2 class="section-title reveal">Proyectos Destacados</h2>
+            <div class="projects-grid">
 
-        <h2>Proyectos Destacados</h2>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <h3>SAGESPRA</h3>
-
-                <p>
-                    Sistema de gestión empresarial para centralizar
-                    operaciones y procesos administrativos.
-                </p>
-
-                <div class="gallery">
-
-                    <img src="img/sagespra_1.png" alt="SAGESPRA Login">
-                    <img src="img/sagespra_2.png" alt="SAGESPRA Pantalla principal">
-                    <img src="img/sagespra_3.png" alt="SAGESPRA Formulario del servicio universitario">
-                    <img src="img/sagespra_4.png" alt="SAGESPRA Metricas">
-
+                <!-- SAGESPRA - Featured -->
+                <div class="project-card featured reveal">
+                    <div class="card-header">
+                        <div class="card-icon">🏢</div>
+                        <a href="https://github.com/IngJefersonGil" class="card-link" target="_blank">↗</a>
+                    </div>
+                    <div class="gallery">
+                        <img src="img/sagespra_1.png" alt="SAGESPRA Login">
+                        <img src="img/sagespra_2.png" alt="SAGESPRA Dashboard">
+                        <img src="img/sagespra_3.png" alt="SAGESPRA Formulario">
+                        <img src="img/sagespra_4.png" alt="SAGESPRA Métricas">
+                    </div>
+                    <div class="card-body">
+                        <h3>SAGESPRA</h3>
+                        <p>Sistema de gestión empresarial para centralizar operaciones y procesos administrativos.
+                            Diseñado para escalar con el crecimiento del negocio.</p>
+                        <div class="card-tags">
+                            <span class="tag">Gestión empresarial</span>
+                            <span class="tag">Dashboard</span>
+                            <span class="tag">Reportes</span>
+                            <span class="tag">Multi-usuario</span>
+                        </div>
+                    </div>
                 </div>
 
-                <a href="https://github.com/IngJefersonGil">Repositorio</a>
+                <!-- CRM -->
+                <div class="project-card reveal">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <span class="card-link">↗</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>CRM Empresarial</h3>
+                        <p>Plataforma para gestión de clientes, seguimiento de ventas y control de operaciones en tiempo
+                            real.</p>
+                        <div class="card-tags">
+                            <span class="tag">CRM</span>
+                            <span class="tag">Ventas</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="project-card reveal">
+                    <div class="card-header">
+                        <div class="card-icon">🛒</div>
+                        <span class="card-link">↗</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Plataforma E-commerce</h3>
+                        <p>Sistema de comercio electrónico diseñado para digitalizar negocios tradicionales con cero
+                            fricción.</p>
+                        <div class="card-tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Pagos</span>
+                            <span class="tag">Inventario</span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-
-
-            <div class="card">
-
-                <h3>CRM Empresarial</h3>
-
-                <p>
-
-                    Plataforma para gestión de clientes,
-                    seguimiento de ventas y control de operaciones.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>Plataforma E-commerce</h3>
-
-                <p>
-
-                    Sistema de comercio electrónico diseñado
-                    para digitalizar negocios tradicionales.
-
-                </p>
-
-            </div>
-
         </div>
-
     </section>
 
+    <div class="divider"></div>
 
-    <section id="architecture" class="section">
-
-        <h2>Arquitectura de Sistemas</h2>
-
-        <p>
-
-            Mis proyectos suelen estructurarse usando
-            arquitecturas modulares y APIs REST,
-            separando claramente las capas de:
-
-        </p>
-
-        <ul>
-
-            <li>Frontend (interfaces)</li>
-            <li>Backend (lógica de negocio)</li>
-            <li>Base de datos</li>
-            <li>Servicios externos</li>
-
-        </ul>
-
-        <p>
-
-            Este enfoque permite escalabilidad,
-            mantenimiento sencillo y evolución del sistema.
-
-        </p>
-
-    </section>
-
-
-    <section id="skills" class="section">
-
-        <h2>Habilidades Técnicas</h2>
-
-        <div class="skills">
-
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>REST APIs</span>
-            <span>Arquitectura de Software</span>
-            <span>Desarrollo Web</span>
-            <span>Aplicaciones móviles</span>
-            <span>Ciberseguridad</span>
-
+    <!-- ARCHITECTURE -->
+    <section id="architecture">
+        <div class="section-inner">
+            <div class="section-tag reveal">Diseño técnico</div>
+            <h2 class="section-title reveal">Arquitectura de Sistemas</h2>
+            <p class="arch-desc reveal">Mis proyectos se estructuran con arquitecturas modulares y APIs REST, con capas
+                claramente separadas para máxima escalabilidad.</p>
+            <div class="arch-grid">
+                <div class="arch-layer reveal">
+                    <span class="arch-icon">🖥️</span>
+                    <h4>Frontend</h4>
+                    <p>Interfaces reactivas, accesibles y optimizadas para el usuario final.</p>
+                </div>
+                <div class="arch-layer reveal">
+                    <span class="arch-icon">⚙️</span>
+                    <h4>Backend</h4>
+                    <p>Lógica de negocio robusta, APIs REST documentadas y seguras.</p>
+                </div>
+                <div class="arch-layer reveal">
+                    <span class="arch-icon">🗄️</span>
+                    <h4>Base de datos</h4>
+                    <p>Modelos relacionales y no relacionales según el caso de uso.</p>
+                </div>
+                <div class="arch-layer reveal">
+                    <span class="arch-icon">🔌</span>
+                    <h4>Servicios externos</h4>
+                    <p>Integración con APIs de terceros, pagos, notificaciones y más.</p>
+                </div>
+            </div>
         </div>
-
     </section>
 
+    <div class="divider"></div>
 
-    <section class="section">
-
-        <h2>Logros</h2>
-
-        <ul>
-
-            <li>Ingeniero en Software</li>
-
-            <li>Ganador de concurso de programación (2019)</li>
-
-            <li>Desarrollo de aplicaciones web, móviles y desktop</li>
-
-        </ul>
-
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-inner">
+            <div class="section-tag reveal">Stack</div>
+            <h2 class="section-title reveal">Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <div class="skill-group reveal">
+                    <h4>Frontend & Mobile</h4>
+                    <div class="skill-items">
+                        <span class="skill-chip">JavaScript</span>
+                        <span class="skill-chip">React</span>
+                        <span class="skill-chip">HTML / CSS</span>
+                        <span class="skill-chip">Aplicaciones móviles</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4>Backend & Infraestructura</h4>
+                    <div class="skill-items">
+                        <span class="skill-chip">Node.js</span>
+                        <span class="skill-chip">REST APIs</span>
+                        <span class="skill-chip">Bases de datos</span>
+                        <span class="skill-chip">Arquitectura de Software</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4>Especialidades</h4>
+                    <div class="skill-items">
+                        <span class="skill-chip">Ciberseguridad</span>
+                        <span class="skill-chip">Desarrollo Web</span>
+                        <span class="skill-chip">Sistemas empresariales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <div class="divider"></div>
 
-    <section id="contact" class="section">
-
-        <h2>Contacto</h2>
-
-        <p>Email: ing.jefersongil@gmail.com</p>
-
-        <p>
-
-            GitHub:
-            <a href="https://github.com/IngJefersonGil">
-                github.com/IngJefersonGil
-            </a>
-
-        </p>
-
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+        <div class="section-inner">
+            <div class="section-tag reveal">Trayectoria</div>
+            <h2 class="section-title reveal">Logros</h2>
+            <div class="achievements-list">
+                <div class="achievement-item reveal">
+                    <span class="achievement-icon">🎓</span>
+                    <div>
+                        <div class="achievement-text">Ingeniero en Software</div>
+                        <div class="achievement-sub">Título universitario en Ingeniería de Software</div>
+                    </div>
+                </div>
+                <div class="achievement-item reveal">
+                    <span class="achievement-icon">🔐</span>
+                    <div>
+                        <div class="achievement-text">Máster en Ciberseguridad</div>
+                        <div class="achievement-sub">Master de formacion permanente en ciberseguridad por la Universitat
+                            Autònoma de Barcelona</div>
+                    </div>
+                </div>
+                <div class="achievement-item reveal">
+                    <span class="achievement-icon">🏆</span>
+                    <div>
+                        <div class="achievement-text">Ganador — Concurso de Programación 2019</div>
+                        <div class="achievement-sub">Primer lugar en competencia de desarrollo de software</div>
+                    </div>
+                </div>
+                <div class="achievement-item reveal">
+                    <span class="achievement-icon">🚀</span>
+                    <div>
+                        <div class="achievement-text">Desarrollo multiplataforma</div>
+                        <div class="achievement-sub">Aplicaciones web, móviles y desktop entregadas en producción</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <div class="divider"></div>
 
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="contact-inner">
+                <div class="section-tag reveal">Contacto</div>
+                <h2 class="section-title reveal">Hablemos</h2>
+                <p class="contact-sub reveal">¿Tienes un proyecto en mente o quieres trabajar juntos? Estoy disponible
+                    para nuevas oportunidades.</p>
+                <div class="contact-links reveal">
+                    <a href="mailto:ing.jefersongil@gmail.com" class="contact-card">
+                        <span class="icon">✉️</span>
+                        ing.jefersongil@gmail.com
+                    </a>
+                    <a href="https://github.com/IngJefersonGil" class="contact-card" target="_blank">
+                        <span class="icon">⌨️</span>
+                        github.com/IngJefersonGil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-
-        <p>© 2026 Ing. Jeferson Gil</p>
-
+        <p>© 2026 Ing. Jeferson Gil — Software Engineer</p>
+        <div class="footer-dot"></div>
+        <p>Diseñado & desarrollado con ♥</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
