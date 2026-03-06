@@ -911,11 +911,25 @@ h2.section-title {
   margin-top: 4px;
 }
 
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
 .certificate-card {
-  max-width: 400px;
-  border-radius: 24px;
+  width: 100%;
+  border-radius: 28px;
   overflow: hidden;
-  transition: all 0.4s;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
 }
 
 .certificate-img {
