@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useCardTilt } from "@/hooks/useCardTilt";
 import MagneticButton from "./MagneticButton";
+import { BASE_PATH } from "@/config";
 
 function ProjectCard({
   children,
@@ -42,10 +43,10 @@ export default function Projects() {
               </MagneticButton>
             </div>
             <div className="gallery">
-              <img src="/img/sagespra_1.png" alt="SAGESPRA Login" />
-              <img src="/img/sagespra_2.png" alt="SAGESPRA Dashboard" />
-              <img src="/img/sagespra_3.png" alt="SAGESPRA Formulario" />
-              <img src="/img/sagespra_4.png" alt="SAGESPRA Metricas" />
+              <img src={`${BASE_PATH}/img/sagespra_1.png`} alt="SAGESPRA Login" />
+              <img src={`${BASE_PATH}/img/sagespra_2.png`} alt="SAGESPRA Dashboard" />
+              <img src={`${BASE_PATH}/img/sagespra_3.png`} alt="SAGESPRA Formulario" />
+              <img src={`${BASE_PATH}/img/sagespra_4.png`} alt="SAGESPRA Metricas" />
             </div>
             <div className="card-body">
               <h3>SAGESPRA</h3>
@@ -86,7 +87,7 @@ export default function Projects() {
             <div className="card-header">
               <div className="card-icon">&#128722;</div>
               <MagneticButton
-                href="/e-commerce-demo/e-com.html"
+                href={`${BASE_PATH}/e-commerce-demo/e-com.html`}
                 className="card-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -105,7 +106,7 @@ export default function Projects() {
                 <span className="tag">Pagos</span>
               </div>
               <a
-                href="/e-commerce-demo/e-com.html"
+                href={`${BASE_PATH}/e-commerce-demo/e-com.html`}
                 className="btn-demo"
                 target="_blank"
                 rel="noopener noreferrer"

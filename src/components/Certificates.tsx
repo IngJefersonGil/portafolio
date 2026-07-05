@@ -1,3 +1,5 @@
+import { BASE_PATH } from "@/config";
+
 export default function Certificates() {
   return (
     <section id="certificates">
@@ -7,7 +9,7 @@ export default function Certificates() {
         <div className="certificates-grid">
           <div className="certificate-card border-gradient glass reveal-left">
             <div className="certificate-img">
-              <img src="/img/Certificado_DevOps.jpg" alt="DevOps" />
+              <img src={`${BASE_PATH}/img/Certificado_DevOps.jpg`} alt="DevOps" />
             </div>
             <div className="card-body">
               <h3>Hard Devs</h3>
@@ -17,7 +19,7 @@ export default function Certificates() {
           <div className="certificate-card border-gradient glass reveal-right">
             <div className="certificate-img">
               <img
-                src="/img/Certificado_OBS.jpg"
+                src={`${BASE_PATH}/img/Certificado_OBS.jpg`}
                 alt="Pensamiento creativo e innovación — OBS"
               />
             </div>
