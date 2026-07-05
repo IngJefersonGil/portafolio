@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# build info
+tsconfig.tsbuildinfo
+
+# env files
+.env
+.env.*
+!.env.example
+
+# opencode (contains API keys)
+opencode.json
+skills-lock.json
+.agents/
+
+# misc
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+
+# backup directories
+.github/portafolio-backup-github/
