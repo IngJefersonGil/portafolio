@@ -96,6 +96,14 @@ export default function Nav() {
         </li>
         <li>
           <a
+            href="#ai-tools"
+            className={active === "ai-tools" ? "active" : ""}
+          >
+            IA
+          </a>
+        </li>
+        <li>
+          <a
             href="#contact"
             className={active === "contact" ? "active" : ""}
           >

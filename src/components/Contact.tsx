@@ -24,7 +24,7 @@ export default function Contact() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/jefersongil"
+              href="https://www.linkedin.com/in/jeferson-gil-b2241b270"
               className="contact-card"
               target="_blank"
               rel="noopener noreferrer"
