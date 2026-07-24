@@ -28,6 +28,18 @@ export default function Certificates() {
               <p>Pensamiento creativo e innovación</p>
             </div>
           </div>
+          <div className="certificate-card border-gradient glass reveal-left">
+            <div className="certificate-img">
+              <img
+                src={`${BASE_PATH}/img/MASTER.jpg`}
+                alt="Máster en Ciberseguridad"
+              />
+            </div>
+            <div className="card-body">
+              <h3>Máster en Ciberseguridad</h3>
+              <p>Especialización en desarrollo seguro</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
