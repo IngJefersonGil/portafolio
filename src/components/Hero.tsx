@@ -1,10 +1,12 @@
 "use client";
 
 import { useScrambleText } from "@/hooks/useScrambleText";
+import { useLanguage } from "@/i18n/LanguageContext";
 import MagneticButton from "./MagneticButton";
 
 export default function Hero() {
   useScrambleText();
+  const { t } = useLanguage();
 
   return (
     <header className="hero">
@@ -15,26 +17,24 @@ export default function Hero() {
       </div>
       <div className="hero-content">
         <h1>
-          Software<br />
-          <span className="line2">Engineer</span>
+          {t.hero.line1}<br />
+          <span className="line2">{t.hero.line2}</span>
         </h1>
         <p>
-          Arquitecto de soluciones digitales y desarrollador full-stack.
-          Transformo ideas complejas en interfaces elegantes y sistemas
-          escalables.
+          {t.hero.description}
         </p>
         <div className="hero-cta">
           <MagneticButton href="#projects" className="btn-primary">
-            Explorar Proyectos <span>&rarr;</span>
+            {t.hero.ctaProjects} <span>&rarr;</span>
           </MagneticButton>
           <MagneticButton href="#contact" className="btn-ghost">
-            Hablemos
+            {t.hero.ctaContact}
           </MagneticButton>
         </div>
       </div>
       <div className="hero-scroll">
         <div className="scroll-line" />
-        <span>SCROLL</span>
+        <span>{t.hero.scroll}</span>
       </div>
     </header>
   );

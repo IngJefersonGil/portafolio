@@ -1,11 +1,16 @@
+"use client";
+
 import { BASE_PATH } from "@/config";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Certificates() {
+  const { t } = useLanguage();
+
   return (
     <section id="certificates">
       <div className="section-inner">
-        <div className="section-tag reveal">Certificados</div>
-        <h2 className="section-title reveal">Certificados</h2>
+        <div className="section-tag reveal">{t.certificates.tag}</div>
+        <h2 className="section-title reveal">{t.certificates.title}</h2>
         <div className="certificates-grid">
           <div className="certificate-card border-gradient glass reveal-left">
             <div className="certificate-img">
@@ -13,31 +18,31 @@ export default function Certificates() {
             </div>
             <div className="card-body">
               <h3>Hard Devs</h3>
-              <p>Introducción a DevOps</p>
+              <p>{t.certificates.devops}</p>
             </div>
           </div>
           <div className="certificate-card border-gradient glass reveal-right">
             <div className="certificate-img">
               <img
                 src={`${BASE_PATH}/img/Certificado_OBS.jpg`}
-                alt="Pensamiento creativo e innovación — OBS"
+                alt="Creative Thinking & Innovation — OBS"
               />
             </div>
             <div className="card-body">
               <h3>OBS Business School</h3>
-              <p>Pensamiento creativo e innovación</p>
+              <p>{t.certificates.obs}</p>
             </div>
           </div>
           <div className="certificate-card border-gradient glass reveal-left">
             <div className="certificate-img">
               <img
                 src={`${BASE_PATH}/img/MASTER.jpg`}
-                alt="Máster en Ciberseguridad"
+                alt="Master in Cybersecurity"
               />
             </div>
             <div className="card-body">
-              <h3>Máster en Ciberseguridad</h3>
-              <p>Especialización en desarrollo seguro</p>
+              <h3>Master in Cybersecurity</h3>
+              <p>{t.certificates.master}</p>
             </div>
           </div>
         </div>

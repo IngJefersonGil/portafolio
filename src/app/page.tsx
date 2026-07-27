@@ -1,3 +1,4 @@
+import Providers from "@/components/Providers";
 import HomeClient from "@/components/HomeClient";
 import About from "@/components/About";
 import Certificates from "@/components/Certificates";
@@ -11,7 +12,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <Providers>
       <HomeClient />
       <About />
       <Projects />
@@ -22,6 +23,6 @@ export default function Home() {
       <Achievements />
       <Contact />
       <Footer />
-    </>
+    </Providers>
   );
 }

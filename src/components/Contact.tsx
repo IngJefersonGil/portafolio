@@ -1,18 +1,23 @@
+"use client";
+
+import { useLanguage } from "@/i18n/LanguageContext";
+
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact">
       <div className="section-inner">
         <div className="contact-inner">
-          <div className="section-tag reveal">Contacto</div>
-          <h2 className="section-title reveal">Hablemos</h2>
+          <div className="section-tag reveal">{t.contact.tag}</div>
+          <h2 className="section-title reveal">{t.contact.title}</h2>
           <p className="contact-sub reveal">
-            ¿Tienes un proyecto en mente o quieres trabajar juntos? Estoy
-            disponible para nuevas oportunidades.
+            {t.contact.subtitle}
           </p>
           <div className="contact-links reveal">
             <a href="mailto:ing.jefersongil@gmail.com" className="contact-card">
               <span className="icon">&#9993;</span>
-              Email
+              {t.contact.email}
             </a>
             <a
               href="https://github.com/IngJefersonGil"

@@ -222,6 +222,46 @@ nav.scrolled {
   font-size: 18px;
 }
 
+/* ─── LANGUAGE TOGGLE ─── */
+.lang-toggle {
+  font-family: var(--font-body), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  background: none;
+  border: 1px solid var(--color-glass-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  white-space: nowrap;
+  position: relative;
+  z-index: 101;
+}
+
+.lang-toggle:hover {
+  color: white;
+  border-color: var(--color-accent);
+  background: rgba(212, 168, 67, 0.1);
+}
+
+.lang-toggle.floating {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  padding: 10px 14px;
+  font-size: 13px;
+  border-radius: 12px;
+  background: rgba(6, 8, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  animation: fadeSlideUp 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 /* ─── HERO ─── */
 .hero {
   min-height: 100vh;
@@ -1348,6 +1388,21 @@ footer p {
 
   .menu-toggle {
     display: block;
+  }
+
+  .lang-toggle {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 999;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 12px;
+    background: rgba(6, 8, 15, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   .bento-grid {

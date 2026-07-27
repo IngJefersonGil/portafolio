@@ -1,15 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Nav() {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const navLinksRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll(".nav-links a");
 
     const onScroll = () => {
       const scrollY = window.scrollY;
@@ -67,7 +69,7 @@ export default function Nav() {
             href="#about"
             className={active === "about" ? "active" : ""}
           >
-            Sobre mí
+            {t.nav.about}
           </a>
         </li>
         <li>
@@ -75,7 +77,7 @@ export default function Nav() {
             href="#projects"
             className={active === "projects" ? "active" : ""}
           >
-            Proyectos
+            {t.nav.projects}
           </a>
         </li>
         <li>
@@ -83,7 +85,7 @@ export default function Nav() {
             href="#architecture"
             className={active === "architecture" ? "active" : ""}
           >
-            Arquitectura
+            {t.nav.architecture}
           </a>
         </li>
         <li>
@@ -91,7 +93,7 @@ export default function Nav() {
             href="#skills"
             className={active === "skills" ? "active" : ""}
           >
-            Habilidades
+            {t.nav.skills}
           </a>
         </li>
         <li>
@@ -99,7 +101,7 @@ export default function Nav() {
             href="#ai-tools"
             className={active === "ai-tools" ? "active" : ""}
           >
-            IA
+            {t.nav.ai}
           </a>
         </li>
         <li>
@@ -107,10 +109,11 @@ export default function Nav() {
             href="#contact"
             className={active === "contact" ? "active" : ""}
           >
-            Contacto
+            {t.nav.contact}
           </a>
         </li>
       </ul>
+      <LanguageToggle />
     </nav>
   );
 }

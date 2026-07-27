@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { useCardTilt } from "@/hooks/useCardTilt";
+import { useLanguage } from "@/i18n/LanguageContext";
 import MagneticButton from "./MagneticButton";
 import { BASE_PATH } from "@/config";
 
@@ -23,11 +24,13 @@ function ProjectCard({
 }
 
 export default function Projects() {
+  const { t } = useLanguage();
+
   return (
     <section id="projects">
       <div className="section-inner">
-        <div className="section-tag reveal">Trabajo</div>
-        <h2 className="section-title reveal">Proyectos Destacados</h2>
+        <div className="section-tag reveal">{t.projects.tag}</div>
+        <h2 className="section-title reveal">{t.projects.title}</h2>
         <div className="projects-grid">
           {/* SAGESPRA - Featured */}
           <ProjectCard className="border-gradient featured glass reveal">
@@ -45,20 +48,16 @@ export default function Projects() {
             <div className="gallery">
               <img src={`${BASE_PATH}/img/sagespra_1.png`} alt="SAGESPRA Login" />
               <img src={`${BASE_PATH}/img/sagespra_2.png`} alt="SAGESPRA Dashboard" />
-              <img src={`${BASE_PATH}/img/sagespra_3.png`} alt="SAGESPRA Formulario" />
-              <img src={`${BASE_PATH}/img/sagespra_4.png`} alt="SAGESPRA Metricas" />
+              <img src={`${BASE_PATH}/img/sagespra_3.png`} alt="SAGESPRA Form" />
+              <img src={`${BASE_PATH}/img/sagespra_4.png`} alt="SAGESPRA Metrics" />
             </div>
             <div className="card-body">
-              <h3>SAGESPRA</h3>
-              <p>
-                Sistema de gestión empresarial para centralizar operaciones y
-                procesos administrativos. Diseñado para escalar con el
-                crecimiento del negocio.
-              </p>
+              <h3>{t.projects.sagespra.title}</h3>
+              <p>{t.projects.sagespra.desc}</p>
               <div className="card-tags">
-                <span className="tag">Gestión empresarial</span>
-                <span className="tag">Dashboard</span>
-                <span className="tag">Reportes</span>
+                {t.projects.sagespra.tags.map((tag) => (
+                  <span className="tag" key={tag}>{tag}</span>
+                ))}
               </div>
             </div>
           </ProjectCard>
@@ -70,14 +69,12 @@ export default function Projects() {
               <span className="card-link">&#8599;</span>
             </div>
             <div className="card-body">
-              <h3>CRM Empresarial</h3>
-              <p>
-                Plataforma para gestión de clientes, seguimiento de ventas y
-                control de operaciones.
-              </p>
+              <h3>{t.projects.crm.title}</h3>
+              <p>{t.projects.crm.desc}</p>
               <div className="card-tags">
-                <span className="tag">CRM</span>
-                <span className="tag">Ventas</span>
+                {t.projects.crm.tags.map((tag) => (
+                  <span className="tag" key={tag}>{tag}</span>
+                ))}
               </div>
             </div>
           </ProjectCard>
@@ -96,14 +93,12 @@ export default function Projects() {
               </MagneticButton>
             </div>
             <div className="card-body">
-              <h3>Plataforma E-commerce</h3>
-              <p>
-                Sistema de comercio electrónico diseñado para digitalizar
-                negocios tradicionales.
-              </p>
+              <h3>{t.projects.ecommerce.title}</h3>
+              <p>{t.projects.ecommerce.desc}</p>
               <div className="card-tags">
-                <span className="tag">E-commerce</span>
-                <span className="tag">Pagos</span>
+                {t.projects.ecommerce.tags.map((tag) => (
+                  <span className="tag" key={tag}>{tag}</span>
+                ))}
               </div>
               <a
                 href={`${BASE_PATH}/e-commerce-demo/e-com.html`}
@@ -111,7 +106,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver Demo Online <span>&rarr;</span>
+                {t.projects.ecommerce.demo} <span>&rarr;</span>
               </a>
             </div>
           </ProjectCard>
