@@ -8,8 +8,8 @@ export default function Achievements() {
   return (
     <section id="achievements">
       <div className="section-inner">
-        <div className="section-tag reveal">{t.achievements.tag}</div>
-        <h2 className="section-title reveal">{t.achievements.title}</h2>
+        <div className="section-tag reveal" data-parallax="0.08">{t.achievements.tag}</div>
+        <h2 className="section-title reveal" data-parallax="0.05">{t.achievements.title}</h2>
         <div className="achievements-list">
           <div className="achievement-item border-gradient glass reveal-left">
             <span className="achievement-icon">&#127891;</span>

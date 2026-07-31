@@ -8,8 +8,8 @@ export default function Architecture() {
   return (
     <section id="architecture">
       <div className="section-inner">
-        <div className="section-tag reveal">{t.architecture.tag}</div>
-        <h2 className="section-title reveal">{t.architecture.title}</h2>
+        <div className="section-tag reveal" data-parallax="0.08">{t.architecture.tag}</div>
+        <h2 className="section-title reveal" data-parallax="0.05">{t.architecture.title}</h2>
         <p className="arch-desc reveal">
           {t.architecture.desc}
         </p>

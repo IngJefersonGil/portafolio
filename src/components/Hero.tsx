@@ -11,11 +11,11 @@ export default function Hero() {
   return (
     <header className="hero">
       <div className="hero-bg-elements">
-        <div className="glow-1" />
-        <div className="glow-2" />
-        <div className="glow-3" />
+        <div className="glow-1" data-parallax="0.15" />
+        <div className="glow-2" data-parallax="0.25" />
+        <div className="glow-3" data-parallax="0.1" />
       </div>
-      <div className="hero-content">
+      <div className="hero-content" data-parallax="0.05">
         <h1>
           {t.hero.line1}<br />
           <span className="line2">{t.hero.line2}</span>

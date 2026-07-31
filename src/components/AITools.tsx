@@ -9,8 +9,8 @@ export default function AITools() {
   return (
     <section id="ai-tools">
       <div className="section-inner">
-        <div className="section-tag reveal">{t.aiTools.tag}</div>
-        <h2 className="section-title reveal">{t.aiTools.title}</h2>
+        <div className="section-tag reveal" data-parallax="0.08">{t.aiTools.tag}</div>
+        <h2 className="section-title reveal" data-parallax="0.05">{t.aiTools.title}</h2>
         <p className="arch-desc reveal">
           {t.aiTools.desc}
         </p>

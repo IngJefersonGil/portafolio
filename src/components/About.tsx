@@ -8,8 +8,8 @@ export default function About() {
   return (
     <section id="about">
       <div className="section-inner">
-        <div className="section-tag reveal">{t.about.tag}</div>
-        <h2 className="section-title reveal">{t.about.title}</h2>
+        <div className="section-tag reveal" data-parallax="0.08">{t.about.tag}</div>
+        <h2 className="section-title reveal" data-parallax="0.05">{t.about.title}</h2>
         <div className="bento-grid about-bento">
           <div
             className="bento-item border-gradient glass about-main reveal"

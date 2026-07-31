@@ -9,8 +9,8 @@ export default function Certificates() {
   return (
     <section id="certificates">
       <div className="section-inner">
-        <div className="section-tag reveal">{t.certificates.tag}</div>
-        <h2 className="section-title reveal">{t.certificates.title}</h2>
+        <div className="section-tag reveal" data-parallax="0.08">{t.certificates.tag}</div>
+        <h2 className="section-title reveal" data-parallax="0.05">{t.certificates.title}</h2>
         <div className="certificates-grid">
           <div className="certificate-card border-gradient glass reveal-left">
             <div className="certificate-img">

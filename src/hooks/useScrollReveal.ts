@@ -4,6 +4,11 @@ import { useEffect } from "react";
 
 export function useScrollReveal() {
   useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) return;
+
     const reveals = document.querySelectorAll(
       ".reveal, .reveal-left, .reveal-right"
     );
@@ -11,19 +16,33 @@ export function useScrollReveal() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          const siblings = Array.from(
+            el.parentElement?.children || []
+          );
+          const index = siblings.indexOf(el);
+          const delay = index * 80;
+
           if (entry.isIntersecting) {
-            const siblings = Array.from(
-              entry.target.parentElement?.children || []
-            );
-            const index = siblings.indexOf(entry.target);
             setTimeout(() => {
-              (entry.target as HTMLElement).classList.add("visible");
-            }, index * 80);
-            observer.unobserve(entry.target);
+              el.classList.add("visible");
+              el.classList.remove("peeled");
+            }, delay);
+          } else {
+            const rect = el.getBoundingClientRect();
+            if (rect.bottom < 0) {
+              setTimeout(() => {
+                el.classList.add("peeled");
+                el.classList.remove("visible");
+              }, delay);
+            }
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -60px 0px",
+      }
     );
 
     reveals.forEach((el) => observer.observe(el));

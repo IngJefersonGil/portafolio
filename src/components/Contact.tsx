@@ -9,8 +9,8 @@ export default function Contact() {
     <section id="contact">
       <div className="section-inner">
         <div className="contact-inner">
-          <div className="section-tag reveal">{t.contact.tag}</div>
-          <h2 className="section-title reveal">{t.contact.title}</h2>
+          <div className="section-tag reveal" data-parallax="0.08">{t.contact.tag}</div>
+          <h2 className="section-title reveal" data-parallax="0.05">{t.contact.title}</h2>
           <p className="contact-sub reveal">
             {t.contact.subtitle}
           </p>

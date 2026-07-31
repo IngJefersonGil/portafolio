@@ -1,27 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { useCardTilt } from "@/hooks/useCardTilt";
 import { useLanguage } from "@/i18n/LanguageContext";
 import MagneticButton from "./MagneticButton";
 import { BASE_PATH } from "@/config";
-
-function ProjectCard({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  useCardTilt(cardRef);
-
-  return (
-    <div ref={cardRef} className={`project-card ${className}`}>
-      {children}
-    </div>
-  );
-}
 
 export default function Projects() {
   const { t } = useLanguage();
@@ -29,11 +10,11 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className="section-inner">
-        <div className="section-tag reveal">{t.projects.tag}</div>
-        <h2 className="section-title reveal">{t.projects.title}</h2>
+        <div className="section-tag reveal" data-parallax="0.08">{t.projects.tag}</div>
+        <h2 className="section-title reveal" data-parallax="0.05">{t.projects.title}</h2>
         <div className="projects-grid">
           {/* SAGESPRA - Featured */}
-          <ProjectCard className="border-gradient featured glass reveal">
+          <div className="project-card border-gradient featured glass reveal">
             <div className="card-header">
               <div className="card-icon">&#127970;</div>
               <MagneticButton
@@ -60,10 +41,10 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-          </ProjectCard>
+          </div>
 
           {/* CRM */}
-          <ProjectCard className="border-gradient glass reveal">
+          <div className="project-card border-gradient glass reveal">
             <div className="card-header">
               <div className="card-icon">&#128202;</div>
               <span className="card-link">&#8599;</span>
@@ -77,10 +58,10 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-          </ProjectCard>
+          </div>
 
           {/* E-commerce */}
-          <ProjectCard className="border-gradient glass reveal">
+          <div className="project-card border-gradient glass reveal">
             <div className="card-header">
               <div className="card-icon">&#128722;</div>
               <MagneticButton
@@ -109,7 +90,7 @@ export default function Projects() {
                 {t.projects.ecommerce.demo} <span>&rarr;</span>
               </a>
             </div>
-          </ProjectCard>
+          </div>
         </div>
       </div>
     </section>
